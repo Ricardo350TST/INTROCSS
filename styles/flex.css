@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#contenedorPrincipal{
+    background-color: #030303;
+    height: 700px;
+}
+
+.contenedor-flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contenedorPrincipal .caja{
+    color: white;
+    background-color:blueviolet;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+.caja-uno{
+    align-self:flex-start;
+}
+
+.caja-tres{
+    align-self: flex-end;
+}

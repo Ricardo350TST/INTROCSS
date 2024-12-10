@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: "Ubuntu", sans-serif;
+}
+
+#tarjeta-uno{
+    background-color: #1E3932;
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+
+#tarjeta-uno .contenedor-image{
+    width: 50%;
+    vertical-align: middle;
+}
+
+#tarjeta-uno .contenedor-image .image-starbucks{
+    max-width: 100%;
+}
+
+.contenedor-texto{
+    position: absolute;
+    color: white;
+    width: 364px;
+}
+
+.contenedor-interno{
+    display: inline-block;
+}
+
+/* Tercera tarjeta */
+
+#tarjeta-tres{
+    background-color: #D50032;
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+
+#tarjeta-tres .contenedor-image-tres{
+    width: 50%;
+    vertical-align: middle;
+}
+
+#tarjeta-tres .contenedor-image-tres .image-cafe{
+    max-width: 100%;
+}
+
+.contenedor-texto-tres{
+    color: white;
+    text-align: center;
+    width: 364px;
+}
+
+.contenedor-interno-tres{
+    display: inline-block;
+}

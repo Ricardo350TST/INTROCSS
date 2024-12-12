@@ -1,5 +1,5 @@
 *{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     box-sizing: border-box;
 }
@@ -55,7 +55,7 @@ p{
 }
 
 .color-rosa{
-    background-color: pink;
+    background-color: rgb(255, 113, 136);
 }
 
 /*.circulito{
@@ -73,9 +73,17 @@ p{
     content: '';
     width: 250px;
     height: 250px;
-    background: red;
+    background: orange;
     left: 0;
     top: -124px;
     position: absolute;
     z-index: 0;
+}
+
+.cajita.rosa::before{
+    background-color:rgb(255, 113, 136);
+}
+
+.cajita.morada::before{
+    background-color: blueviolet;
 }

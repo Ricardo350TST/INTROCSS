@@ -16,7 +16,7 @@ body{
     display: flex;
     justify-content: space-between;
     max-width: 85%;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .topnavbar .nav{
@@ -40,8 +40,10 @@ body{
     color: green;
 }
 
+/* Diseño para Cookies */
+
 .cookie-banner{
-    padding: 30px ;
+    padding: 30px;
     border-top: 1px solid;
     position: absolute;
     bottom: 0;
@@ -54,7 +56,7 @@ body{
 }
 
 .cookie-banner .banner-text-bold{
-    font-style: bold;
+    font-weight: bold;
 }
 
 .cookie-banner .banner-button-container{
@@ -70,4 +72,8 @@ body{
     padding: 10px 5px;
     border-radius: 25px;
     width: 100px;
+}
+
+.invisible{
+    display: none;
 }

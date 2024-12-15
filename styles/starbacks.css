@@ -36,10 +36,64 @@ body{
     color: black;
 }
 
-.topnavbar .nav .nav-item a:hover{
-    color: green;
+/* Estilo específico para "MENÚ" y "REWARDS" */
+.topnavbar .left-nav .nav-item a {
+    letter-spacing: 2px;
 }
 
+.topnavbar .left-nav .nav-item a:hover{
+    color: green;
+    transition: 0.2s;
+}
+
+/* Estilo para localizar tienda */
+.topnavbar .right-nav .nav-item.localizar a:hover{
+    color: green;
+    transition: 0.2s;
+}
+
+
+/* DISEÑO PARA LOS BOTONES EN EL NAVEGADOR */
+
+/* Botones personalizados */
+
+.nav-button {
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Botón "Ingresar" */
+.topnavbar .right-nav .nav-item .nav-button.ingresar{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+.topnavbar .right-nav .nav-item .nav-button.ingresar:hover {
+    background-color: #00704a;
+    color: #ffffff;
+    border: 2px solid #00704a;
+    transition: 0.2s;
+}
+
+/* Botón "Únete" */
+.topnavbar .right-nav .nav-item .nav-button.unete {
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    border: 2px solid #000000;
+}
+.topnavbar .right-nav .nav-item .nav-button.unete:hover {
+    background-color: #00704a;
+    color: rgb(255, 255, 255);
+    border: 2px solid #00704a;
+    transition: 0.2s;
+}
+
+/* **************************************************** */
 /* Diseño para Cookies */
 
 .cookie-banner{
@@ -72,6 +126,12 @@ body{
     padding: 10px 5px;
     border-radius: 25px;
     width: 100px;
+    cursor: pointer;
+}
+
+.cookie-banner .banner-button-container .banner-button:hover{
+    background-color: #00704a;
+    transition: 0.2s;
 }
 
 .invisible{

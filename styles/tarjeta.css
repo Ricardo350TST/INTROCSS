@@ -1,32 +1,43 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+/* GENERAL */
+
+.contenedor-interno{
+    display: inline-block;
 }
 
-body{
-    font-family: "Ubuntu", sans-serif;
+.contenedor-texto{
+    position: absolute;
+    color: white;
+    text-align: center;
+    top: 50%;
 }
 
-h2{
-    font-size: 28px;
+.contenedor-texto h2{
+    font-size: 30px;
     margin-bottom: 2rem;
-    width: 400px;
 }
 
-p{
-    font-size: 18px;
+.contenedor-texto p{
+    font-size: 20px;
     margin-bottom: 1rem;
     letter-spacing: 0.8px;
     line-height: 1.6;
-    width: 430px;
 }
 
+/* Tarjeta uno */
 #tarjeta-uno{
     background-color: #1E3932;
-    position: relative;
-    margin-bottom: 30px;
-    border-radius: 15px;
+    margin-top: 0;
+}
+
+#tarjeta-uno .contenedor-texto{
+    right: 30%;
+    transform: translate(60%, -50%);
+}
+#tarjeta-uno .contenedor-texto h2 {
+    width: 550px; /* Incrementa el ancho del título */
+}
+#tarjeta-uno .contenedor-texto p {
+    width: 550px; /* Incrementa el ancho del párrafo */
 }
 
 #tarjeta-uno .contenedor-image{
@@ -37,49 +48,246 @@ p{
     max-width: 100%;
 }
 
-.contenedor-texto{
-    position: absolute;
-    color: white;
-    width: 364px;
-    text-align: center;
-    top: 50%;
-    right: 30%;
-    transform: translate(60%, -50%);
+/* Tarjeta dos */
+#tarjeta-dos{
+    background-color: #0044B4;
 }
 
-.contenedor-interno{
-    display: inline-block;
+#tarjeta-dos .contenedor-texto{
+    left: 30%;
+    transform: translate(-63%, -50%);
+}
+#tarjeta-dos .contenedor-texto h2 {
+    width: 580px; /* Incrementa el ancho del título */
+}
+#tarjeta-dos .contenedor-texto p {
+    width: 580px; /* Incrementa el ancho del párrafo */
+}
+
+#tarjeta-dos .contenedor-image-dos{
+    width: 50%;
+    float: right; /*Imagen a lado derecho*/
+}
+
+#tarjeta-dos .contenedor-image-dos .image-cranberry{
+    max-width: 100%;
 }
 
 /* Tercera tarjeta */
-
 #tarjeta-tres{
     background-color: #D50032;
-    margin-bottom: 30px;
-    border-radius: 15px;
-    position: relative;
+}
+
+#tarjeta-tres .contenedor-texto{
+    right: 30%;
+    transform: translate(65%, -50%);
+}
+#tarjeta-tres .contenedor-texto h2 {
+    width: 550px; /* Incrementa el ancho del título */
+}
+#tarjeta-tres .contenedor-texto p {
+    width: 550px; /* Incrementa el ancho del párrafo */
 }
 
 #tarjeta-tres .contenedor-image-tres{
     width: 50%;
-    vertical-align: middle;
 }
 
 #tarjeta-tres .contenedor-image-tres .image-cafe{
     max-width: 100%;
 }
 
-.contenedor-texto-tres{
-    position: absolute;
-    color: white;
-    text-align: center;
-    width: 364px;
-    text-align: center;
-    top: 50%;
-    right: 30%;
-    transform: translate(60%, -50%);
+/* Tarjeta Cuatro */
+#tarjeta-cuatro{
+    background-color: #1E3932;
 }
 
-.contenedor-interno-tres{
+#tarjeta-cuatro .contenedor-texto{
+    left: 30%;
+    transform: translate(-65%, -50%);
+}
+#tarjeta-cuatro .contenedor-texto h2 {
+    width: 430px; /* Incrementa el ancho del título */
+}
+#tarjeta-cuatro .contenedor-texto p {
+    width: 430px; /* Incrementa el ancho del párrafo */
+}
+
+#tarjeta-cuatro .contenedor-image-cuatro{
+    width: 50%;
+    float: right; /*Imagen a lado derecho*/
+}
+
+#tarjeta-cuatro .contenedor-image-cuatro .image-rewards{
+    max-width: 100%;
+}
+
+/* Tarjeta cinco */
+#tarjeta-cinco{
+    background-color: #D50032;
+}
+
+#tarjeta-cinco .contenedor-texto{
+    right: 30%;
+    transform: translate(65%, -50%);
+}
+#tarjeta-cinco .contenedor-texto h2 {
+    width: 550px; /* Incrementa el ancho del título */
+}
+#tarjeta-cinco .contenedor-texto p {
+    width: 550px; /* Incrementa el ancho del párrafo */
+}
+
+#tarjeta-cinco .contenedor-image-cinco{
+    width: 50%;
+}
+
+#tarjeta-cinco .contenedor-image-cinco .image-vaso{
+    max-width: 100%;
+}
+
+/* Tarjeta 6 y 7 */
+
+/* Contenedor de tarjetas */
+.tarjetas-container {
+    display: flex;
+    justify-content: space-between;  /* Alinea las tarjetas horizontalmente */
+    gap: 10px;  /* Espacio entre las tarjetas */
+    max-width: 94%; /* Ocupan como máximo el 90% del ancho disponible */
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilo común para todas las tarjetas */
+.tarjeta {
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor de la imagen */
+.contenedor-image-seis, .contenedor-image-siete {
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-noticias, .image-promociones {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Contenedor texto tarjeta 6 y 7 */
+#tarjeta-seis .contenedor-texto,
+#tarjeta-siete .contenedor-texto {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Para que ocupe toda la altura del contenedor */
+    padding: 20px;
+}
+#tarjeta-seis .contenedor-texto p,
+#tarjeta-siete .contenedor-texto p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px; /* Espacio entre párrafos */
+}
+
+
+/* Botón de la tarjeta */
+.boton-tarjeta-seis, .boton-tarjeta-siete {
     display: inline-block;
+    margin-top: 15px;
+    padding: 8px 20px;
+    color: #fff;
+    background-color: #00704A; /* Verde Starbucks */
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.boton-tarjeta-seis:hover, .boton-tarjeta-siete:hover {
+    background-color: #004D33; /* Verde más oscuro al pasar el cursor */
+}
+
+/* Estilos específicos para la tarjeta seis */
+#tarjeta-seis {
+    background-color: #F6BFD9;  /* Color de fondo de tarjeta-seis */
+}
+
+#tarjeta-seis .contenedor-texto h2 {
+    font-size: 28px;
+    margin-bottom: 1rem;
+}
+
+#tarjeta-seis .contenedor-texto p {
+    font-size: 18px;
+}
+
+/* Estilos específicos para la tarjeta siete */
+#tarjeta-siete {
+    background-color: #98CDE4;  /* Color de fondo de tarjeta-siete */
+}
+
+#tarjeta-siete .contenedor-texto h2 {
+    font-size: 28px;
+    margin-bottom: 1rem;
+}
+
+#tarjeta-siete .contenedor-texto p {
+    font-size: 18px;
+}
+
+
+/* Estilo general del botón de la tarjeta cinco*/
+.boton-tarjeta-cinco {
+    display: inline-block; /* Permite aplicar padding y márgenes */
+    margin-top: 1rem; /* Separación del párrafo */
+    padding: 10px 20px; /* Tamaño del botón */
+    font-size: 16px; /* Tamaño del texto */
+    font-weight: 600; /* Negrita en el texto */
+    color: white; /* Color del texto */
+    background: none; /* Sin fondo */
+    border: 1px solid; /* Borde */
+    border-radius: 50px; /* Esquinas redondeadas */
+    text-decoration: none;
+    text-align: center; /* Centra el texto */
+    line-height: 1;
+    cursor: pointer; /* Cursor tipo mano al pasar */
+    transition: background-color 0.3s ease; /* Animación en hover */
+}
+/* Cambiar el color al pasar el mouse */
+.boton-tarjeta-cinco:hover {
+    background-color: #b4022c;
+}
+
+/* Aplica a todas las tarjetas */
+#tarjeta-uno, #tarjeta-dos, #tarjeta-tres, #tarjeta-cuatro,
+#tarjeta-cinco {
+    max-width: 92%; /* Ocupan como máximo el 90% del ancho disponible */
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-left: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+    position: relative; /* Mantener posición relativa para contenido interno */
+    overflow: hidden; /* Para manejar el contenido dentro del borde */
+}
+
+/* Estilo general para las tarjetas 6 y 7 */
+#tarjeta-seis, #tarjeta-siete {
+    margin: 1%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+    min-height: 700px;  /* Altura mínima de las tarjetas */
+    height: auto; /* Para que la tarjeta se ajuste a su contenido */
 }

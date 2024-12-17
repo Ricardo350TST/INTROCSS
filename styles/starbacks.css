@@ -98,12 +98,14 @@ body{
 /* Diseño para Cookies */
 
 .cookie-banner{
+    background-color: white;
     padding: 30px;
     border-top: 1px solid;
-    position: absolute;
+    position: sticky;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
     display: flex;
+    z-index: 2;
 }
 
 .banner-text-container{

@@ -23,6 +23,19 @@
     line-height: 1.6;
 }
 
+/* Aplica a todas las tarjetas */
+#tarjeta-uno, #tarjeta-dos, #tarjeta-tres, #tarjeta-cuatro,
+#tarjeta-cinco {
+    max-width: 92%; /* Ocupan como máximo el 90% del ancho disponible */
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-left: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+    position: relative; /* Mantener posición relativa para contenido interno */
+    overflow: hidden; /* Para manejar el contenido dentro del borde */
+}
+
 /* Tarjeta uno */
 #tarjeta-uno{
     background-color: #1E3932;
@@ -146,106 +159,6 @@
     max-width: 100%;
 }
 
-/* Tarjeta 6 y 7 */
-
-/* Contenedor de tarjetas */
-.tarjetas-container {
-    display: flex;
-    justify-content: space-between;  /* Alinea las tarjetas horizontalmente */
-    gap: 10px;  /* Espacio entre las tarjetas */
-    max-width: 94%; /* Ocupan como máximo el 90% del ancho disponible */
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Estilo común para todas las tarjetas */
-.tarjeta {
-    color: white;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Contenedor de la imagen */
-.contenedor-image-seis, .contenedor-image-siete {
-    width: 100%;
-    overflow: hidden;
-}
-
-.image-noticias, .image-promociones {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Contenedor texto tarjeta 6 y 7 */
-#tarjeta-seis .contenedor-texto,
-#tarjeta-siete .contenedor-texto {
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%; /* Para que ocupe toda la altura del contenedor */
-    padding: 20px;
-}
-#tarjeta-seis .contenedor-texto p,
-#tarjeta-siete .contenedor-texto p {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 15px; /* Espacio entre párrafos */
-}
-
-
-/* Botón de la tarjeta */
-.boton-tarjeta-seis, .boton-tarjeta-siete {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 8px 20px;
-    color: #fff;
-    background-color: #00704A; /* Verde Starbucks */
-    text-decoration: none;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 0.9rem;
-    transition: background-color 0.3s ease;
-}
-
-.boton-tarjeta-seis:hover, .boton-tarjeta-siete:hover {
-    background-color: #004D33; /* Verde más oscuro al pasar el cursor */
-}
-
-/* Estilos específicos para la tarjeta seis */
-#tarjeta-seis {
-    background-color: #F6BFD9;  /* Color de fondo de tarjeta-seis */
-}
-
-#tarjeta-seis .contenedor-texto h2 {
-    font-size: 28px;
-    margin-bottom: 1rem;
-}
-
-#tarjeta-seis .contenedor-texto p {
-    font-size: 18px;
-}
-
-/* Estilos específicos para la tarjeta siete */
-#tarjeta-siete {
-    background-color: #98CDE4;  /* Color de fondo de tarjeta-siete */
-}
-
-#tarjeta-siete .contenedor-texto h2 {
-    font-size: 28px;
-    margin-bottom: 1rem;
-}
-
-#tarjeta-siete .contenedor-texto p {
-    font-size: 18px;
-}
-
-
 /* Estilo general del botón de la tarjeta cinco*/
 .boton-tarjeta-cinco {
     display: inline-block; /* Permite aplicar padding y márgenes */
@@ -268,26 +181,129 @@
     background-color: #b4022c;
 }
 
-/* Aplica a todas las tarjetas */
-#tarjeta-uno, #tarjeta-dos, #tarjeta-tres, #tarjeta-cuatro,
-#tarjeta-cinco {
-    max-width: 92%; /* Ocupan como máximo el 90% del ancho disponible */
-    margin-top: 0px;
-    margin-right: auto;
-    margin-bottom: 30px;
-    margin-left: auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
-    position: relative; /* Mantener posición relativa para contenido interno */
-    overflow: hidden; /* Para manejar el contenido dentro del borde */
+/* TARJETA 6 Y 7 */
+
+/* Contenedor para las dos tarjetas (fila horizontal) */
+.fila-tarjetas-verticales {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 92%;
+    margin: 0 auto;
 }
 
-/* Estilo general para las tarjetas 6 y 7 */
-#tarjeta-seis, #tarjeta-siete {
-    margin: 1%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    display: inline-block;
-    text-align: center;
-    min-height: 700px;  /* Altura mínima de las tarjetas */
-    height: auto; /* Para que la tarjeta se ajuste a su contenido */
+/* Estilo común para las tarjetas verticales */
+.tarjeta-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 48%; /* Ambas tarjetas ocupan aproximadamente el 92% del contenedor */
+    margin: 0; /* Elimina márgenes entre tarjetas */
+    padding: 0; /* Evita padding adicional */
+    overflow: hidden; /* Asegura que no haya desbordamiento del contenido */
 }
+
+/* Imágenes dentro de las tarjetas */
+.contenedor-image-seis img,
+.contenedor-image-siete img {
+    width: 100%;
+    height: auto;
+    display: block; /* Elimina espacio adicional debajo de la imagen */
+    margin: 0; /* Evita márgenes adicionales */
+    padding: 0; /* Evita padding adicional */
+    position: relative; /* Asegura que las imágenes estén en una capa superior */
+    z-index: 2; /* Coloca las imágenes por encima de los fondos */
+}
+
+
+/* Estilo común del texto y botón */
+.tarjeta-vertical .contenedor-texto {
+    position: relative; /* Corregido para evitar conflictos */
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box; /* Garantiza que el padding no aumente el tamaño */
+}
+
+/* Estilo específico para el texto y botón de la TARJETA 6 */
+#tarjeta-seis .contenedor-texto p {
+    font-size: 19px;
+    margin: 0 auto 10px;
+    max-width: 250px;
+    color: #D50032; /* Color rojo */
+}
+
+#tarjeta-seis .contenedor-texto a {
+    display: inline-block;
+    padding: 7px 16px;
+    background-color: transparent; /* Fondo transparente */
+    border: 1px solid #D50032; /* Borde rojo */
+    color: #D50032; /* Texto rojo */
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#tarjeta-seis .contenedor-texto a:hover {
+    background-color: #FF0325; /* Fondo rojo más fuerte */
+    border: none;
+    color: white; /* Texto blanco */
+}
+
+/* Estilo específico para el texto y botón de la TARJETA 7 */
+#tarjeta-siete .contenedor-texto p {
+    margin: 0 auto 10px;
+    max-width: 200px;
+    font-size: 19px;
+    color: #003B49; /* Color azul oscuro */
+}
+
+#tarjeta-siete .contenedor-texto a {
+    display: inline-block;
+    padding: 7px 16px;
+    background-color: transparent; /* Fondo transparente */
+    border: 1px solid #003B49; /* Borde azul oscuro */
+    color: #003B49; /* Texto azul oscuro */
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#tarjeta-siete .contenedor-texto a:hover {
+    background-color: #0070FF; /* Fondo azul claro */
+    border: none;
+    color: white; /* Texto blanco */
+}
+
+
+/* Contenedor de texto para tarjeta 6 y 7 */
+#tarjeta-seis .contenedor-texto,
+#tarjeta-siete .contenedor-texto {
+    position: relative;
+    top: -85px; /* Ajusta el valor para que suba y se una al semicirculo */
+    background-color: #F6BFD9; /* Fondo rosa */
+    margin: 0; /* Evita márgenes adicionales */
+    padding: 100px 15px 120px; /* Aumenta el padding inferior para empujar el texto */
+    box-sizing: border-box;
+    z-index: 1; /* Asegura que el texto esté sobre el fondo | y por debajo de las imágenes */
+    min-height: 280px;
+}
+
+#tarjeta-siete .contenedor-texto {
+    background-color: #98CDE4; /* Fondo azul */
+}
+
+/* Ajuste específico para el texto y botón */
+#tarjeta-seis .contenedor-texto p,
+#tarjeta-seis .contenedor-texto a,
+#tarjeta-siete .contenedor-texto p,
+#tarjeta-siete .contenedor-texto a {
+    position: relative;
+    top: 50px; /* Desplaza únicamente el texto y botón hacia abajo */
+}
+
+

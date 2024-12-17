@@ -1,0 +1,143 @@
+/* Footer */
+#footer {
+    background-color: white;
+    padding: 15px 0;
+    box-shadow: 0 -4px 3px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.contenedor-footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: black;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 25px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #707070;
+    font-size: 16px;
+}
+
+.footer-section ul li a:hover {
+    color: rgb(44, 44, 44);
+    transition: color 0.3s ease;
+}
+
+/* Espacio vacío */
+.footer-empty-space {
+    flex: 3.5; /* Aumenta el espacio vacío */
+}
+
+/* Redes sociales */
+#social-media-section {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.social-media {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centra los íconos horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    gap: 40px; /* Espacio entre íconos */
+}
+
+.social-media li {
+    display: inline-block;
+}
+
+.social-media li a {
+    color: #6e6e6e; /* Color inicial de los íconos */
+    font-size: 34px; /* Tamaño de los íconos */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transición para color y movimiento */
+}
+
+.social-media li a:hover {
+    color: #000; /* Cambia el color al pasar el cursor */
+    transform: translateY(-15px) scale(1.2); /* Mueve el ícono hacia arriba y aplica el zoom */
+}
+
+/* Nuevos enlaces de acceso */
+#accessibility-links {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.accessibility-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centra los enlaces horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    gap: 30px; /* Espacio entre los enlaces */
+}
+
+.accessibility-list li {
+    display: inline-block;
+}
+
+.accessibility-list li a {
+    color: #6e6e6e; /* Color inicial de los enlaces */
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transición suave de color */
+}
+
+/* Agrega el "|" entre los enlaces, pero no después del último */
+.accessibility-list li a::after {
+    content: '|';  /* El símbolo que se añadirá */
+    margin-left: 10px; /* Espacio entre el enlace y el símbolo */
+}
+
+.accessibility-list li:last-child a::after {
+    content: ''; /* Elimina el "|" después del último enlace */
+}
+
+.accessibility-list li a:hover {
+    color: #000; /* Cambia el color al pasar el cursor */
+}
+
+/* Copyright */
+#copyright-section {
+    padding: 20px 0;
+    text-align: center; /* Centrado horizontal */
+}
+
+.copyright-text,
+.developer-text {
+    color: #6e6e6e; /* Color gris */
+    margin: 0;
+}
+
+.copyright-text {
+    font-size: 15px; /* Tamaño de la primera línea */
+}
+
+.developer-text {
+    font-size: 13px; /* Tamaño de la segunda línea */
+    margin-top: 5px; /* Espacio entre las dos líneas */
+}

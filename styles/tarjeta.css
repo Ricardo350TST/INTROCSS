@@ -306,4 +306,126 @@
     top: 50px; /* Desplaza únicamente el texto y botón hacia abajo */
 }
 
+/* CÓDIGO PARA RESPONSIVE */
+
+/* RESPONSIVE DESIGN */
+
+/* Tamaño para tablets (768px a 1024px) */
+@media (max-width: 1024px) {
+    .contenedor-texto h2 {
+        font-size: 24px;
+        margin-bottom: 1.5rem;
+        width: auto; /* Ajuste automático */
+    }
+
+    .contenedor-texto p {
+        font-size: 16px;
+        line-height: 1.4;
+        width: auto;
+    }
+
+    #tarjeta-uno .contenedor-texto,
+    #tarjeta-tres .contenedor-texto,
+    #tarjeta-cinco .contenedor-texto {
+        transform: translate(0, -50%);
+        right: 10%; /* Centra el texto */
+    }
+
+    #tarjeta-dos .contenedor-texto,
+    #tarjeta-cuatro .contenedor-texto {
+        transform: translate(0, -50%);
+        left: 10%;
+    }
+
+    /* Tarjetas verticales ajustadas */
+    .fila-tarjetas-verticales {
+        flex-direction: column; /* Cambia a columna */
+    }
+
+    .tarjeta-vertical {
+        width: 100%; /* Ocupan todo el ancho */
+        margin-bottom: 20px;
+    }
+}
+
+/* Tamaño para móviles (hasta 768px) */
+@media (max-width: 768px) {
+    .contenedor-texto h2 {
+        font-size: 20px;
+        margin-bottom: 1rem;
+    }
+
+    .contenedor-texto p {
+        font-size: 14px;
+    }
+
+    /* Redefine las imágenes y texto */
+    .contenedor-image,
+    .contenedor-image-dos,
+    .contenedor-image-tres,
+    .contenedor-image-cuatro,
+    .contenedor-image-cinco {
+        width: 100%; /* Imágenes a pantalla completa */
+        float: none; /* Quita el float */
+    }
+
+    .contenedor-texto {
+        position: static;
+        transform: none;
+        text-align: center;
+        padding: 10px; /* Espaciado adicional */
+    }
+
+    #tarjeta-uno, #tarjeta-dos, #tarjeta-tres, #tarjeta-cuatro, #tarjeta-cinco {
+        max-width: 100%; /* Aprovecha el ancho completo */
+        margin: 15px auto; /* Espaciado entre tarjetas */
+    }
+
+    /* Botones ajustados */
+    .boton-tarjeta-cinco {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    /* Tarjetas verticales */
+    .fila-tarjetas-verticales {
+        flex-direction: column; /* Apiladas */
+    }
+
+    .tarjeta-vertical {
+        width: 100%;
+    }
+
+    /* Ajustes de texto y botones */
+    #tarjeta-seis .contenedor-texto,
+    #tarjeta-siete .contenedor-texto {
+        padding: 50px 15px 60px; /* Reduce el padding */
+        top: 0; /* Elimina ajuste vertical */
+        min-height: auto;
+    }
+
+    #tarjeta-seis .contenedor-texto p,
+    #tarjeta-seis .contenedor-texto a,
+    #tarjeta-siete .contenedor-texto p,
+    #tarjeta-siete .contenedor-texto a {
+        top: 0; /* Elimina el desplazamiento vertical */
+    }
+}
+
+/* Tamaño para móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    .contenedor-texto h2 {
+        font-size: 18px; /* Títulos más pequeños */
+    }
+
+    .contenedor-texto p {
+        font-size: 12px; /* Párrafos más pequeños */
+    }
+
+    .boton-tarjeta-cinco {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
+
 
